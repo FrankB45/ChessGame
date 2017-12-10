@@ -1,40 +1,41 @@
 package Utils;
 
 public class Coordinate {
-    public void setX(int x) {
-        this.x = x;
+    private int Col;
+    private int Row;
+
+    public Coordinate(int Row, int Col) {
+        this.Row = Row;
+
+        this.Col = Col;
     }
 
-    public void setY(int y) {
-        this.y = y;
+    public int getCol() {
+        return Col;
     }
 
-    int x;
-    int y;
-
-    public Coordinate(int x, int y) {
-        this.x = x;
-        this.y = y;
+    public void setCol(int col) {
+        Col = col;
     }
 
-    public int getY() {
-        return y;
+    public int getRow() {
+        return Row;
     }
 
-    public int getX() {
-        return x;
+    public void setRow(int row) {
+        Row = row;
     }
 
     @Override
     public String toString() {
         return "Utils.Coordinate{" +
-                "x=" + x +
-                ", y=" + y +
+                "x=" + Col +
+                ", y=" + Row +
                 '}';
     }
 
     public boolean isEquals(Coordinate coordinate) {
-        if(getX() == coordinate.getX() && getY() == coordinate.getY()){
+        if(getRow() == coordinate.getRow() && getCol() == coordinate.getCol()){
             return true;
         }else{
             return false;
@@ -42,8 +43,8 @@ public class Coordinate {
     }
 
     public Coordinate equals(Coordinate coordinate){
-        this.x = coordinate.getX();
-        this.y = coordinate.getY();
-        return new Coordinate(x,y);
+        this.Row= coordinate.getRow();
+        this.Col = coordinate.getCol();
+        return new Coordinate(Row,Col);
     }
 }

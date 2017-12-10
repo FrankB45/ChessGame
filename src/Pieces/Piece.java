@@ -19,15 +19,15 @@ public class Piece
         pieceType=0;
         this.cords = new Coordinate(0,0);
     }
-    public void move(int changeinx, int changeiny){
-        if(pieceType == 1) {
-            cords.setX(cords.getX()-changeinx);;
-            cords.setY(cords.getY()-changeiny);
-        }else{
-            cords.setX(cords.getX()+changeinx);
-            cords.setY(cords.getY()+changeiny);
-        }
-    }
+//    public void move(int changeinx, int changeiny){
+//        if(pieceType == 1) {
+//            cords.setX(cords.getX()-changeinx);;
+//            cords.setY(cords.getY()-changeiny);
+//        }else{
+//            cords.setX(cords.getX()+changeinx);
+//            cords.setY(cords.getY()+changeiny);
+//        }
+//    }
 
     public boolean hasMove()
     {return false;}
