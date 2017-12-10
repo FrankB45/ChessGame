@@ -1,6 +1,5 @@
-import Pieces.*;
-import Utils.Coordinate;
-
+import
+import Pieces.*
 public class Board {
     private Piece[][] board;
 
