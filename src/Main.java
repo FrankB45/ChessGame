@@ -46,9 +46,16 @@ public class Main implements Runnable
 
     public static void main(String args[])
     {
-        //Creates Model
-        Model m = new Model();
-        SwingUtilities.invokeLater(new Main(m));
+        if(args==null) {
+            //Creates Model
+            Model m = new Model();
+            SwingUtilities.invokeLater(new Main(m));
+        }else
+        {
+            Model m = new Model();
+
+            
+        }
     }
 
 
