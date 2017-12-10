@@ -1,14 +1,14 @@
 public class King extends Piece {
     Coordinate coordinate;
-    int type;
+
     int pointValue = 1;
     boolean selected;
 
     public King(int type, int x, int y)
     {
         coordinate = new Coordinate(x,y);
-        this.type=type;
-        selected = false;
+        super.pieceType=type;
+        super.selected = false;
     }
 
     public Coordinate getCoorindates(){

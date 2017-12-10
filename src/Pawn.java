@@ -8,8 +8,8 @@ public class Pawn extends Piece{
     public Pawn(int type, int x, int y)
     {
         coordinate = new Coordinate(x,y);
-        this.type=type;
-        selected = false;
+        super.pieceType=type;
+        super.selected = false;
     }
 
     public Coordinate getCoorindates(){

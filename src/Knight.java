@@ -7,8 +7,8 @@ public class Knight extends Piece {
     public Knight(int type, int x, int y)
     {
         coordinate = new Coordinate(x,y);
-        this.type=type;
-        selected = false;
+        super.pieceType=type;
+        super.selected = false;
     }
 
     @Override

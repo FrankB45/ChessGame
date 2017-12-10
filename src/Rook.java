@@ -6,7 +6,8 @@ public class Rook extends Piece {
     Coordinate coordinate;
 
     public Rook(int type, int x, int y) {
-        this.type = type;
+        super.pieceType = type;
+        super.selected = false;
         coordinate = new Coordinate(x,y);
     }
 

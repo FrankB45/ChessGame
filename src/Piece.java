@@ -1,9 +1,10 @@
-public abstract class Piece
+public class Piece
 {
     int x,y,pieceType;
-    boolean selected;
+    boolean selected,bgColor;
+    //bgColor will determine what that tiles color is black or white
 
-    public Piece(int type, int x, int y)
+    public Piece(boolean bg,int type, int x, int y)
     {
         pieceType = type;
         this.x=x;
@@ -47,7 +48,17 @@ public abstract class Piece
         return selected;
     }
     public void changeSelected(){selected=!selected;}
-
+    @Override
+    public String toString()
+    {
+        if(pieceType==0)
+            return "[ ]";
+        else if(pieceType==1)
+            return "[w]";
+        else if(pieceType==2)
+            return "[b]";
+        return "[ ]";
+    }
 
 
 

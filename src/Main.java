@@ -53,6 +53,8 @@ public class Main implements Runnable
         }else
         {
             Model m = new Model();
+            m.setGameUp();
+            m.printBoard();
 
             
         }
