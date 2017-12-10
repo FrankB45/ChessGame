@@ -35,16 +35,14 @@ public class Piece
     public boolean hasAttack()
     {return false;}
 
-    public int getX(){
-        return cords.getX();
+    public Coordinate getCords() {
+        return cords;
     }
-    public int getY(){
-        return cords.getY();
+    public void setCords(Coordinate cord)
+    {
+        this.cords=cord;
     }
-    public void setX(int x) {cords.setX(x); }
-    public void setY(int y) {
-        cords.setY(y);
-    }
+
     public boolean isSelected(){
         return selected;
     }
