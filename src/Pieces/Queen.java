@@ -1,13 +1,12 @@
 package Pieces;
 
-import Utils.Coordinate;
-public class Bishop extends Piece {
+public class Queen extends Piece {
     Coordinate coordinate;
     int type;
     int pointValue = 1;
     boolean selected;
 
-    public Bishop(int type, int x, int y)
+    public Queen(int type, int x, int y)
     {
         coordinate = new Coordinate(x,y);
         super.pieceType=type;
@@ -28,5 +27,4 @@ public class Bishop extends Piece {
     public void changeSelected(){
         selected=!selected;
     }
-
 }

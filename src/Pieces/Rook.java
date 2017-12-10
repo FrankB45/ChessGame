@@ -1,17 +1,15 @@
 package Pieces;
 
-import Utils.Coordinate;
-public class Bishop extends Piece {
-    Coordinate coordinate;
-    int type;
-    int pointValue = 1;
-    boolean selected;
+public class Rook extends Piece {
 
-    public Bishop(int type, int x, int y)
-    {
-        coordinate = new Coordinate(x,y);
-        super.pieceType=type;
+    int type;
+    boolean selected;
+    Coordinate coordinate;
+
+    public Rook(int type, int x, int y) {
+        super.pieceType = type;
         super.selected = false;
+        coordinate = new Coordinate(x,y);
     }
 
     public Coordinate getCoorindates(){
@@ -21,12 +19,8 @@ public class Bishop extends Piece {
     public void setCoordinate(Coordinate coordinate){
         this.coordinate.equals(coordinate);
     }
-
     public boolean isSelected(){
         return selected;
     }
-    public void changeSelected(){
-        selected=!selected;
-    }
-
+    public void changeSelected(){selected=!selected;}
 }

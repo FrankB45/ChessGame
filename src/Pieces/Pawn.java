@@ -1,13 +1,14 @@
 package Pieces;
-
 import Utils.Coordinate;
-public class Bishop extends Piece {
+
+//all what the pieces classes should have is the props and how to get them all the movement is part of the model
+public class Pawn extends Piece{
     Coordinate coordinate;
     int type;
     int pointValue = 1;
     boolean selected;
 
-    public Bishop(int type, int x, int y)
+    public Pawn(int type, int x, int y)
     {
         coordinate = new Coordinate(x,y);
         super.pieceType=type;
@@ -29,4 +30,6 @@ public class Bishop extends Piece {
         selected=!selected;
     }
 
+
 }
+
