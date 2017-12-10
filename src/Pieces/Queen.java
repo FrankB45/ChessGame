@@ -1,5 +1,7 @@
 package Pieces;
 
+import Utils.Coordinate;
+
 public class Queen extends Piece {
     Coordinate coordinate;
     int type;

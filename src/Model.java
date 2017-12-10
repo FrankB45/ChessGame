@@ -49,7 +49,7 @@ public class Model extends Observable {
         board[boardlength-1][5] = new Bishop(2,0,5);
         board[boardlength-1][6] = new Knight(2,0,6);
         board[boardlength-1][7] = new   Rook(2,0,7);
-
+        notifyObservers();
     }
     public void printBoard()
     {

@@ -1,30 +1,31 @@
 package Pieces;
 
+import Utils.Coordinate;
+
 public class Piece
 {
-    int x,y,pieceType;
+    Coordinate cords;
+    int pieceType;
     boolean selected,bgColor;
     //bgColor will determine what that tiles color is black or white
 
-    public Piece(boolean bg,int type, int x, int y)
+    public Piece(boolean bg, int type, Coordinate cord)
     {
         pieceType = type;
-        this.x=x;
-        this.y=y;
+        this.cords=cord;
     }
     public Piece()
     {
         pieceType=0;
-        this.x=0;
-        this.y=0;
+        this.cords = new Coordinate(0,0);
     }
     public void move(int changeinx, int changeiny){
         if(pieceType == 1) {
-            x -= changeinx;
-            y -= changeiny;
+            cords.setX(cords.getX()-changeinx);;
+            cords.setY(cords.getY()-changeiny);
         }else{
-            x+= changeinx;
-            y+= changeiny;
+            cords.setX(cords.getX()+changeinx);
+            cords.setY(cords.getY()+changeiny);
         }
     }
 
@@ -35,16 +36,14 @@ public class Piece
     {return false;}
 
     public int getX(){
-        return x;
+        return cords.getX();
     }
     public int getY(){
-        return y;
+        return cords.getY();
     }
-    public void setX(int x) {
-        this.x = x;
-    }
+    public void setX(int x) {cords.setX(x); }
     public void setY(int y) {
-        this.y = y;
+        cords.setY(y);
     }
     public boolean isSelected(){
         return selected;

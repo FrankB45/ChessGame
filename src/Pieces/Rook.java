@@ -1,5 +1,7 @@
 package Pieces;
 
+import Utils.Coordinate;
+
 public class Rook extends Piece {
 
     int type;
