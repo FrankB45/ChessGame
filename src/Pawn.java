@@ -1,37 +1,36 @@
 public class Pawn extends Piece{
     int x;
     int y;
+    int type;
     boolean selected;
 
-    public Pawn(int x, int y) {
+    public Pawn(int type, int x, int y)
+    {
         this.x = x;
         this.y = y;
+        this.type=type;
         selected = false;
     }
 
-
     @Override
-    public void move(int changeinx, int changeiny) {
+    public boolean hasMove()
+    {
+        if(selected)
+        {
 
-        super.move(changeinx, changeiny);
+        }
+        return false;
     }
 
     @Override
-    public int getX() {
-        return x;
+    public boolean hasAttack()
+    {
+        if(selected)
+        {
+
+        }
+        return false;
     }
-
-    @Override
-    public int getY() {
-        return y;
-    }
-
-
-    @Override
-    public void isSelected() {
-        selected = true;
-    }
-
 
     public boolean isMoveValid(int Tox, int Toy){
         if(x - Tox >1 || y-Toy > 1){

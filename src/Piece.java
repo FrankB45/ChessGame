@@ -1,26 +1,44 @@
-public abstract class Piece{
-    int x;
-    int y;
+public abstract class Piece
+{
+    int x,y,pieceType;
     boolean selected;
-    int pointValue = 1;
-    String color;
-
+    public Piece(int type, int x, int y)
+    {
+        pieceType = type;
+        this.x=x;
+        this.y=y;
+    }
+    public Piece()
+    {
+        pieceType=0;
+        this.x=0;
+        this.y=0;
+    }
     public void move(int changeinx, int changeiny){
         x-=changeinx;
         y-=changeiny;
     }
+    public boolean hasMove()
+    {return false;}
+    public boolean hasAttack()
+    {return false;}
 
     public int getX(){
         return x;
     }
-
     public int getY(){
         return y;
     }
-
-    public void isSelected(){
-        selected = true;
+    public void setX(int x) {
+        this.x = x;
     }
+    public void setY(int y) {
+        this.y = y;
+    }
+    public boolean isSelected(){
+        return selected;
+    }
+    public void changeSelected(){selected=!selected;}
 
 
 
