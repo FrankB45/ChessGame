@@ -1,3 +1,5 @@
+package Pieces;
+
 public class Piece
 {
     int x,y,pieceType;

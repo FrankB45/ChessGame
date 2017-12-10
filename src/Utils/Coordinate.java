@@ -1,3 +1,5 @@
+package Utils;
+
 public class Coordinate {
     int x;
     int y;
@@ -17,7 +19,7 @@ public class Coordinate {
 
     @Override
     public String toString() {
-        return "Coordinate{" +
+        return "Utils.Coordinate{" +
                 "x=" + x +
                 ", y=" + y +
                 '}';

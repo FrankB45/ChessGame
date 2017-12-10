@@ -1,11 +1,12 @@
-//all what the pieces classes should have is the props and how to get them all the movement is part of the model
-public class Pawn extends Piece{
+package Pieces;
+
+public class Bishop extends Piece {
     Coordinate coordinate;
     int type;
     int pointValue = 1;
     boolean selected;
 
-    public Pawn(int type, int x, int y)
+    public Bishop(int type, int x, int y)
     {
         coordinate = new Coordinate(x,y);
         super.pieceType=type;
@@ -27,6 +28,4 @@ public class Pawn extends Piece{
         selected=!selected;
     }
 
-
 }
-

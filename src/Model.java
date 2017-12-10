@@ -1,5 +1,4 @@
-import javax.swing.*;
-import java.util.ArrayList;
+import Pieces.*;
 import java.util.Observable;
 
 public class Model extends Observable {
