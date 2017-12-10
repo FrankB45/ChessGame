@@ -1,4 +1,6 @@
 import Pieces.*;
+import Utils.Coordinate;
+
 import java.util.Observable;
 
 public class Model extends Observable {
@@ -24,7 +26,7 @@ public class Model extends Observable {
     {
         for(int i=0;i<board.length;i++)
             for(int j=0;j<board[i].length;j++)
-                board[i][j]= new Piece(false,0,j,i);
+                board[i][j]= new Piece(0,new Coordinate(0,0));
 
         int boardlength = board.length;
         board[0][0] = new   Rook(1,0,0);

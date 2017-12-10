@@ -9,7 +9,7 @@ public class Piece
     boolean selected,bgColor;
     //bgColor will determine what that tiles color is black or white
 
-    public Piece(boolean bg, int type, Coordinate cord)
+    public Piece(int type, Coordinate cord)
     {
         pieceType = type;
         this.cords=cord;
