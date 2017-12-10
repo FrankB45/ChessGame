@@ -7,21 +7,11 @@ public class Coordinate {
         this.y = y;
     }
 
-    public void setX(int x) {
-        this.x = x;
-    }
-
-    public void setY(int y) {
-        this.y = y;
-    }
-
     public int getY() {
-
         return y;
     }
 
     public int getX() {
-
         return x;
     }
 
@@ -39,5 +29,11 @@ public class Coordinate {
         }else{
             return false;
         }
+    }
+
+    public Coordinate equals(Coordinate coordinate){
+        this.x = coordinate.getX();
+        this.y = coordinate.getY();
+        return new Coordinate(x,y);
     }
 }

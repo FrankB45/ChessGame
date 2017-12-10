@@ -2,6 +2,7 @@
 public class Pawn extends Piece{
     Coordinate coordinate;
     int type;
+    int pointValue = 1;
     boolean selected;
 
     public Pawn(int type, int x, int y)
@@ -11,35 +12,21 @@ public class Pawn extends Piece{
         selected = false;
     }
 
-    public boolean howToMove()
-    {
-        if(type == 1)
-        {
-            y -=1;
-        }else{
-            y = Math.abs(y-1);
-        }
-        return false;
-    }
-
-    @Override
-    public boolean hasAttack()
-    {
-        if(selected)
-        {
-
-        }
-        return false;
-    }
-
     public Coordinate getCoorindates(){
         return coordinate;
     }
 
     public void setCoordinate(Coordinate coordinate){
-        setX(coordinate.getX());
-        setY(coordinate.getY());
+        this.coordinate.equals(coordinate);
     }
 
+    public boolean isSelected(){
+        return selected;
     }
+    public void changeSelected(){
+        selected=!selected;
+    }
+
+
+}
 

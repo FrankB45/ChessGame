@@ -1,13 +1,24 @@
+public class Knight extends Piece {
 
-public class Rook extends Piece {
-
+    Coordinate coordinate;
     int type;
     boolean selected;
-    Coordinate coordinate;
 
-    public Rook(int type, int x, int y) {
-        this.type = type;
+    public Knight(int type, int x, int y)
+    {
         coordinate = new Coordinate(x,y);
+        this.type=type;
+        selected = false;
+    }
+
+    @Override
+    public boolean hasAttack()
+    {
+        if(selected)
+        {
+
+        }
+        return false;
     }
 
     public Coordinate getCoorindates(){
@@ -17,6 +28,7 @@ public class Rook extends Piece {
     public void setCoordinate(Coordinate coordinate){
         this.coordinate.equals(coordinate);
     }
+
     public boolean isSelected(){
         return selected;
     }
