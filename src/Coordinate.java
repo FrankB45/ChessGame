@@ -24,4 +24,20 @@ public class Coordinate {
 
         return x;
     }
+
+    @Override
+    public String toString() {
+        return "Coordinate{" +
+                "x=" + x +
+                ", y=" + y +
+                '}';
+    }
+
+    public boolean isEquals(Coordinate coordinate) {
+        if(getX() == coordinate.getX() && getY() == coordinate.getY()){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }

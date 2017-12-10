@@ -4,29 +4,21 @@ public class Rook extends Piece {
     int y;
     int type;
     boolean selected;
+    Coordinate coordinate;
     public Rook(int type, int x, int y) {
     this.type = type;
-    this.x = x;
-    this.y = y;
-
+    coordinate = new Coordinate(x,y);
     }
-    public boolean hasMove()
-    {
-        if(type == 1){
 
-        }
-
-        }
-
-    public boolean hasAttack()
-    {return false;}
-
-    public int getX(){
-        return x;
+    public Coordinate getCoorindates(){
+        return coordinate;
     }
-    public int getY(){
-        return y;
+
+    public void setCoordinate(Coordinate coordinate){
+        setX(coordinate.getX());
+        setY(coordinate.getY());
     }
+
     public void setX(int x) {
         this.x = x;
     }

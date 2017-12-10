@@ -1,16 +1,16 @@
+//all what the pieces classes should have is the props and how to get them all the movement is part of the model
 public class Pawn extends Piece{
     Coordinate coordinate;
     int type;
     boolean selected;
 
-    public Pawn(int type, Coordinate coordinate)
+    public Pawn(int type, int x, int y)
     {
-        this.coordinate = coordinate;
+        coordinate = new Coordinate(x,y);
         this.type=type;
         selected = false;
     }
 
-    @Override
     public boolean howToMove()
     {
         if(type == 1)
@@ -32,16 +32,14 @@ public class Pawn extends Piece{
         return false;
     }
 
-    public boolean isMoveValid(int Tox, int Toy){
-        if(x - Tox >1 || y-Toy > 1){
-            return false;
-        }else{
-            x-=Tox;
-            y-=Toy;
-            return true;
-        }
+    public Coordinate getCoorindates(){
+        return coordinate;
     }
-    public move(int x , int y){
+
+    public void setCoordinate(Coordinate coordinate){
+        setX(coordinate.getX());
+        setY(coordinate.getY());
+    }
 
     }
-}
+
