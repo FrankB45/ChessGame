@@ -1,6 +1,8 @@
 import javax.swing.*;
+import java.util.Observable;
+import java.util.Observer;
 
-public class GUI
+public class GUI implements Observer
 {
     private Model model;
     private Main main;
@@ -11,7 +13,8 @@ public class GUI
         this.main = main;
 
     }
-    public void update()
+    @Override
+    public void update(Observable o, Object arg)
     {
 
     }

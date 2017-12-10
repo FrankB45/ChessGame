@@ -1,7 +1,8 @@
 import javax.swing.*;
 import java.util.ArrayList;
+import java.util.Observable;
 
-public class Model {
+public class Model extends Observable {
     private Piece[][] board;
     boolean endStartGame;
 
