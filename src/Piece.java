@@ -3,11 +3,6 @@ public abstract class Piece{
     int y;
     boolean selected;
 
-    public Piece(int x, int y){
-        this.x = x;
-        this.y = y;
-        selected = false;
-    }
 
     public void move(int changeinx, int changeiny){
         x-=changeinx;
@@ -25,6 +20,8 @@ public abstract class Piece{
     public void isSelected(){
         selected = true;
     }
+
+
 
 
 }
