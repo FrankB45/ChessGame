@@ -1,13 +1,13 @@
+
 import javax.swing.*;
 
 public class Main implements Runnable
 {
-    private Model model;
     private JFrame mainFrame;
-    public Main(Model m)
+    public Main()
     {
-        //Applies model to global variable
-        model =m;
+
+
     }
     @Override
     public void run()
@@ -21,7 +21,7 @@ public class Main implements Runnable
         /**///////////
 
         //Loads GUI elements
-        new GUI(model,mainPanel,this);
+        new GUI(mainPanel,this);
         //Makes Frame
         frameBasics(mainFrame);
 
@@ -46,16 +46,15 @@ public class Main implements Runnable
 
     public static void main(String args[])
     {
-        if(args==null) {
-            //Creates Model
-            Model m = new Model();
-            SwingUtilities.invokeLater(new Main(m));
-        }else
-        {
+        if(args.length>0) {
             Model m = new Model();
             m.setGameUp();
             m.printBoard();
 
+        }else
+        {
+            Options[] options = {"Yes","No"};
+            SwingUtilities.invokeLater(new Main());
             
         }
     }

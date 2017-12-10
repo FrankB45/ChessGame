@@ -1,18 +1,24 @@
 import javax.swing.*;
+import java.util.Observable;
+import java.util.Observer;
 
-public class GUI
+public class GUI implements Observer
 {
     private Model model;
+
     private Main main;
 
-    public GUI(Model m, JPanel mPanel, Main main)
+    public GUI( JPanel mPanel, Main main)
     {
-        model = m;
         this.main = main;
+        JLabel label = new JLabel("Stringsss");
+        mPanel.add(label);
+        main.updateJFrame();
 
     }
-    public void update()
-    {
+
+    @Override
+    public void update(Observable observable, Object o) {
 
     }
 }
