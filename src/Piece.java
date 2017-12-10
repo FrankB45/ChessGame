@@ -2,6 +2,7 @@ public abstract class Piece
 {
     int x,y,pieceType;
     boolean selected;
+
     public Piece(int type, int x, int y)
     {
         pieceType = type;
@@ -15,11 +16,18 @@ public abstract class Piece
         this.y=0;
     }
     public void move(int changeinx, int changeiny){
-        x-=changeinx;
-        y-=changeiny;
+        if(pieceType == 1) {
+            x -= changeinx;
+            y -= changeiny;
+        }else{
+            x+= changeinx;
+            y+= changeiny;
+        }
     }
+
     public boolean hasMove()
     {return false;}
+
     public boolean hasAttack()
     {return false;}
 

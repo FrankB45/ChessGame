@@ -1,23 +1,23 @@
 public class Pawn extends Piece{
-    int x;
-    int y;
+    Coordinate coordinate;
     int type;
     boolean selected;
 
-    public Pawn(int type, int x, int y)
+    public Pawn(int type, Coordinate coordinate)
     {
-        this.x = x;
-        this.y = y;
+        this.coordinate = coordinate;
         this.type=type;
         selected = false;
     }
 
     @Override
-    public boolean hasMove()
+    public boolean howToMove()
     {
-        if(selected)
+        if(type == 1)
         {
-
+            y -=1;
+        }else{
+            y = Math.abs(y-1);
         }
         return false;
     }
@@ -40,5 +40,8 @@ public class Pawn extends Piece{
             y-=Toy;
             return true;
         }
+    }
+    public move(int x , int y){
+
     }
 }
