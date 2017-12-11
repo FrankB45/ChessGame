@@ -23,7 +23,7 @@ public class Main implements Runnable
         /**///////////
 
         //Loads GUIForNewGame elements
-        new GUIForNewGame(this,mainPanel);
+        //new GUIForNewGame(this,mainPanel);
         //Makes Frame
         frameBasics(mainFrame);
 
