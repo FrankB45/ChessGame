@@ -30,7 +30,19 @@ public class Piece
 //    }
 
     public boolean hasMove()
-    {return false;}
+    {
+        if(selected){
+
+        }
+        return false;
+    }
+    public int getPieceType(){
+        return pieceType;
+    }
+
+    public void setPieceType(int i){
+        pieceType = i;
+    }
 
     public boolean hasAttack()
     {return false;}

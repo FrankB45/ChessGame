@@ -20,8 +20,8 @@ public class Main implements Runnable
         mainFrame.getContentPane().add(mainPanel);
         /**///////////
 
-        //Loads GUI elements
-        new GUI(mainPanel,this);
+        //Loads GUIForNewGame elements
+        new GUIForNewGame(mainPanel,this);
         //Makes Frame
         frameBasics(mainFrame);
 
