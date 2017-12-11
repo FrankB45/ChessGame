@@ -1,4 +1,6 @@
 
+import sun.net.dns.ResolverConfiguration;
+
 import javax.swing.*;
 
 public class Main implements Runnable
@@ -21,7 +23,7 @@ public class Main implements Runnable
         /**///////////
 
         //Loads GUIForNewGame elements
-        new GUIForNewGame(mainPanel,this);
+        new GUIForNewGame(this,mainPanel);
         //Makes Frame
         frameBasics(mainFrame);
 
@@ -53,7 +55,7 @@ public class Main implements Runnable
 
         }else
         {
-            Options[] options = {"Yes","No"};
+            JFrame temp = new JFrame("Main");
             SwingUtilities.invokeLater(new Main());
             
         }
