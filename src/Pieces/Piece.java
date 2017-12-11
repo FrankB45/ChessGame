@@ -59,6 +59,10 @@ public class Piece
         return selected;
     }
     public void changeSelected(){selected=!selected;}
+
+    public void movePiece(Coordinate coordinateToGo){
+        cords.equals(coordinateToGo);
+    }
     @Override
     public String toString()
     {
@@ -70,6 +74,7 @@ public class Piece
             return "[b]";
         return "[ ]";
     }
+
 
 
 
