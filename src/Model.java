@@ -17,6 +17,13 @@ public class Model extends Observable {
 
     }
 
+    public boolean verifyMove(Coordinate current){
+
+        if(){
+
+        }
+    }
+
     public Piece[][] getBoard() {
         return board;
     }

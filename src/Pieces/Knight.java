@@ -3,6 +3,7 @@ package Pieces;
 import Utils.Coordinate;
 
 public class Knight extends Piece {
+    int pieceOfTypeUnit = 4;
     public Knight(int type, Coordinate cord)
     {
         super(type, cord);
@@ -16,6 +17,10 @@ public class Knight extends Piece {
 
         }
         return false;
+    }
+
+    public int pieceOfTypeUnit(){
+        return pieceOfTypeUnit;
     }
 
 }
