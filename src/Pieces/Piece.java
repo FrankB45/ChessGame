@@ -6,6 +6,7 @@ public class Piece
 {
     Coordinate cords;
     int pieceType;
+    //0=null 1=white 2=black
     boolean selected,bgColor;
     //bgColor will determine what that tiles color is black or white
 

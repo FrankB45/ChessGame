@@ -27,6 +27,11 @@ public class Model extends Observable {
     public Piece[][] getBoard() {
         return board;
     }
+    public void selectPiece(Coordinate cord)
+    {
+        board[cord.getRow()][cord.getCol()].changeSelected();
+    }
+
 
     public void initBoard() {
         for (int i = 0; i < board.length; i++)
