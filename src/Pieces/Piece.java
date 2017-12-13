@@ -4,14 +4,17 @@ import Utils.Coordinate;
 
 public class Piece
 {
+    int pieceOfTypeUnit = 6;
     Coordinate cords;
     int pieceType;
     //0=null 1=white 2=black
     boolean selected,bgColor;
+    int pieceOfType;
     //bgColor will determine what that tiles color is black or white
 
-    public Piece(int type, Coordinate cord)
+    public Piece(int type, Coordinate cord, int pieceOfType)
     {
+        this.pieceType = pieceOfType;
         pieceType = type;
         this.cords=cord;
     }
@@ -30,13 +33,13 @@ public class Piece
 //        }
 //    }
 
-    public boolean hasMove()
-    {
-        if(selected){
-
-        }
-        return false;
-    }
+//    public boolean hasMove()
+//    {
+//        if(selected){
+//
+//        }
+//        return false;
+//    }
     public int getPieceType(){
         return pieceType;
     }
@@ -63,6 +66,10 @@ public class Piece
 
     public void movePiece(Coordinate coordinateToGo){
         cords.equals(coordinateToGo);
+    }
+
+    public int getPieceOfType(){
+        return pieceOfType;
     }
     @Override
     public String toString()

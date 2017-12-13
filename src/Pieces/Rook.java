@@ -3,15 +3,11 @@ package Pieces;
 import Utils.Coordinate;
 
 public class Rook extends Piece {
-    int pieceOfTypeUnit = 3;
 
     public Rook(int type, Coordinate cord)
     {
-        super(type, cord);
+        super(type, cord, 2);
     }
 
-    public int pieceOfTypeUnit(){
-        return pieceOfTypeUnit;
-    }
 
 }

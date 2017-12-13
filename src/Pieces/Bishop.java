@@ -2,13 +2,9 @@ package Pieces;
 
 import Utils.Coordinate;
 public class Bishop extends Piece {
-    int pieceOfTypeUnit = 4;
     public Bishop(int type, Coordinate cord)
     {
-        super(type,cord);
+        super(type,cord, 3);
     }
 
-    public int pieceOfTypeUnit(){
-        return pieceOfTypeUnit;
-    }
 }

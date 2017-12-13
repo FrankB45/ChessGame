@@ -5,10 +5,9 @@ import java.util.ArrayList;
 
 //all what the pieces classes should have is the props and how to get them all the movement is part of the model
 public class Pawn extends Piece{
-    int pieceOfTypeUnit = 5;
     public Pawn(int type, Coordinate cord)
     {
-        super(type,cord);
+        super(type,cord, 5);
     }
     public ArrayList<Coordinate> validSpots()
     {
@@ -27,8 +26,5 @@ public class Pawn extends Piece{
 
     }
 
-    public int getPieceOfTypeUnit(){
-        return pieceOfTypeUnit;
-    }
 }
 

@@ -17,11 +17,22 @@ public class Model extends Observable {
 
     }
 
-    public boolean verifyMove(Coordinate current){
-
-        if(){
+//    public void move(Coordinate coordinate, ){
+//
+//    }
+    public boolean verifyMove(Piece piece){
+        if(piece.getPieceOfType() == 0){
+            Piece king = new King(piece.getPieceType(),piece.getCords(),piece.getPieceOfType() );
 
         }
+    }
+    private Piece getPositionBoardType(Coordinate current, Coordinate toGo){
+
+    }
+
+
+    private boolean checkIfThereIsAPiece(Coordinate coordinateToCheck){
+        board[coordinateToCheck.getCol()][coordinateToCheck.getRow()].
     }
 
     public Piece[][] getBoard() {
@@ -33,11 +44,7 @@ public class Model extends Observable {
     }
 
 
-    public void initBoard() {
-        for (int i = 0; i < board.length; i++)
-            for (int j = 0; j < board[i].length; j++)
-                board[i][j] = new Piece(0, new Coordinate(0, 0));
-
+    private void initBoard() {
         int boardlength = board.length;
         board[0][0] = new Rook(1, new Coordinate(0, 0));
         board[0][1] = new Knight(1, new Coordinate(0, 1));
